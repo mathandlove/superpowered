@@ -84,4 +84,18 @@
   .navbar-links {
     display: none;
   }
+
+  .navbar-container {
+    padding: 0 16px;
+  }
+
+  .navbar-logo {
+    font-size: 1.4rem;
+    padding: 4px 8px;
+  }
+
+  .navbar-cta .nav-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
 }

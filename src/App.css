@@ -74,7 +74,7 @@
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1;
   margin-bottom: 24px;
   color: var(--comic-black);
@@ -87,7 +87,7 @@
   color: var(--comic-black);
   -webkit-text-stroke: 0;
   text-shadow: 2px 2px 0px #fff;
-  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
 }
 
 .hero h1 span {
@@ -504,19 +504,46 @@ h2 {
   
   .hero-inner {
     transform: none;
-    padding: 24px;
+    padding: 24px 20px;
   }
   
   .hero h1 {
-    font-size: clamp(1.6rem, 6.5vw, 3rem);
+    font-size: clamp(2rem, 8vw, 3rem);
+    word-wrap: break-word;
+    line-height: 1.2;
+  }
+
+  .hero h1 .hero-headline,
+  .hero h1 span {
+    white-space: normal;
+    display: inline;
+    -webkit-text-stroke: 0;
+    text-shadow: none;
   }
   
   .hero-cta-group {
     flex-direction: column;
+    gap: 16px;
   }
   
   .primary-btn {
     width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 14px 24px;
+  }
+
+  .hero-note {
+    transform: rotate(0deg);
+  }
+
+  .intro-block {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .hero .intro-name {
     text-align: center;
   }
   

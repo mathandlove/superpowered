@@ -18,9 +18,9 @@ function App() {
         <div className="hero-inner">
           <div className="hero-content">
             <h1><span className="hero-headline">AI can help students think better,</span> <span>if they learn how to use it.</span></h1>
-            <p>Most students have never been shown how to use AI well. Not to copy and paste. To get unstuck, think clearly, practice skills, and solve real problems they're facing.</p>
+            <p>Most students have never been shown how to use AI well. Not to copy and paste.<br />To get unstuck, think clearly, practice skills, and solve real problems they're facing.</p>
             <div className="hero-cta-group">
-              <a href="https://outlook.office.com/book/Superpower@robotsandpencils.com" target="_blank" rel="noopener noreferrer" className="primary-btn">Book a Free Session</a>
+              <a href="https://outlook.office365.com/book/Superpower@robotsandpencils.com" target="_blank" rel="noopener noreferrer" className="primary-btn">Book a Free Session</a>
               <span className="hero-note">10 spots available</span>
             </div>
             <div className="intro-block">
@@ -127,7 +127,7 @@ function App() {
             <h2>A good trade.</h2>
             <div className="text-content">
               <p>I'm deep in this research and preparing for a talk at SXSW; working with real students is how I make the work better.</p>
-              <p>You get a free hour with a researcher. I learn from real sessions. Good trade.</p>
+              <p>You get a free AI researcher from MIT. I get to learn what is important to you.</p>
             </div>
           </div>
         </section>
@@ -139,7 +139,7 @@ function App() {
           <div className="text-content">
             <p>Dr. Elliott Hedman is an MIT Media Lab PhD who helps students learn how to use AI as a coach—so they can think better, get unstuck, and take ownership of their learning. He’s worked at Google and IDEO and has helped organizations like LEGO and McGraw Hill build for the students and teachers they serve. Now he offers free 1:1 sessions where students bring a real challenge and learn a practical, repeatable way to use AI responsibly—without replacing their own work or voice.</p>
             <div className="about-links" style={{ marginTop: '32px', display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
-              <a href="https://buildempathy.com/portfolio" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--comic-blue)', fontWeight: 600, textDecoration: 'none' }}>Link to Elliott’s CV (2024) →</a>
+              <a href="https://buildempathy.com/portfolio" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--comic-blue)', fontWeight: 600, textDecoration: 'none' }}>Link to Elliott’s Portfolio →</a>
               <a href="https://www.linkedin.com/in/customerobsession/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--comic-blue)', fontWeight: 600, textDecoration: 'none' }}>LinkedIn Profile →</a>
             </div>
           </div>
@@ -151,7 +151,7 @@ function App() {
         <div className="container">
           <h2>Book a free session</h2>
           <p className="subtitle">One hour. One real problem. A new way to get unstuck.</p>
-          <a href="https://outlook.office.com/book/Superpower@robotsandpencils.com" target="_blank" rel="noopener noreferrer" className="cta-btn">Book a Session</a>
+          <a href="https://outlook.office365.com/book/Superpower@robotsandpencils.com" target="_blank" rel="noopener noreferrer" className="cta-btn">Book a Session</a>
           <p className="cta-note">Want to sit in as a parent? Totally fine.</p>
         </div>
       </section>
