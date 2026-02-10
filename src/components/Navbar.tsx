@@ -23,7 +23,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
-          Elliott Hedman
+          Superpowered
         </div>
         <div className="navbar-links">
           <a href="#how-it-works">How it works</a>
@@ -31,7 +31,7 @@ const Navbar = () => {
           <a href="#about">About</a>
         </div>
         <div className="navbar-cta">
-          <a href="#" className="nav-btn">Book Session</a>
+          <a href="https://outlook.office.com/book/Superpower@robotsandpencils.com" className="nav-btn">Book Session</a>
         </div>
       </div>
     </nav>

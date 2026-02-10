@@ -1,6 +1,13 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import elliottPhoto from './assets/elliottHedman.webp'
+import soccerIcon from './assets/icons/np_soccer_7761881_000000.png'
+import podcastIcon from './assets/icons/np_podcast_4869882_000000.png'
+import mathIcon from './assets/icons/np_dyslexia_5268619_000000.png'
+import friendIcon from './assets/icons/np_friend_7374996_000000.png'
+import jobIcon from './assets/icons/np_employee_8253921_000000.png'
+import universityIcon from './assets/icons/np_university_5953089_000000.png'
 
 function App() {
   return (
@@ -9,13 +16,18 @@ function App() {
       
       <div className="hero">
         <div className="hero-inner">
-          <h1>AI can help students think better, <span>if they learn how to use it.</span></h1>
-          <p>Most students have never been shown how to use AI well. Not to copy and paste. To get unstuck, think clearly, practice skills, and solve real problems they're facing.</p>
-          <div className="hero-cta-group">
-            <a href="#" className="primary-btn">Book a Free Session</a>
-            <span className="hero-note">Limited spots available</span>
+          <div className="hero-content">
+            <h1><span className="hero-headline">AI can help students think better,</span> <span>if they learn how to use it.</span></h1>
+            <p>Most students have never been shown how to use AI well. Not to copy and paste. To get unstuck, think clearly, practice skills, and solve real problems they're facing.</p>
+            <div className="hero-cta-group">
+              <a href="https://outlook.office.com/book/Superpower@robotsandpencils.com" className="primary-btn">Book a Free Session</a>
+              <span className="hero-note">10 spots available</span>
+            </div>
+            <div className="intro-block">
+              <img src={elliottPhoto} alt="Elliott Hedman" className="profile-photo" />
+              <p className="intro-name">I’m <strong style={{ color: 'var(--comic-blue)' }}>Dr. Elliott Hedman</strong> (MIT Media Lab). In my day job, I advise companies on how to use AI—now I’m teaching students those same skills.</p>
+            </div>
           </div>
-          <p className="intro-name">I'm <strong style={{ color: '#fff' }}>Elliott Hedman</strong>, an MIT researcher, and I'm offering free 1:1 sessions where I work directly with your student to do exactly that.</p>
         </div>
       </div>
 
@@ -28,22 +40,22 @@ function App() {
             <div className="step-card">
               <div className="step-number">01</div>
               <h3>Bring a Challenge</h3>
-              <p>Your student shows up with a real challenge—something they actually care about. No hypothetical scenarios.</p>
+              <p>You show up with a real challenge—something you actually care about. No hypothetical scenarios.</p>
             </div>
             <div className="step-card">
               <div className="step-number">02</div>
               <h3>Solve Together</h3>
-              <p>We open AI and solve it together. I teach them a repeatable method: how to ask better questions and test ideas.</p>
+              <p>We open AI and solve it together. I teach you a repeatable method: how to ask better questions and test ideas.</p>
             </div>
             <div className="step-card">
               <div className="step-number">03</div>
               <h3>Personal Playbook</h3>
-              <p>They leave with a concrete framework they can reuse on school, sports, social stress, and motivation.</p>
+              <p>You leave with a concrete framework you can reuse on school, sports, social stress, and motivation.</p>
             </div>
           </div>
 
           <div className="highlight-box">
-            <p>No lectures. No homework. Just their problem, and a new way to tackle it.</p>
+            <p>No lectures. No homework. Just your problem, and a new way to tackle it.</p>
           </div>
         </div>
       </section>
@@ -54,52 +66,94 @@ function App() {
           <h2>Real problems. Real sessions.</h2>
           <div className="quote-grid">
             <div className="quote-card">
-              <div className="quote-icon">⚽️</div>
+              <div className="quote-icon">
+                <img src={soccerIcon} alt="Soccer" />
+              </div>
               <p>"How do I get more playing time on my soccer team?"</p>
             </div>
             <div className="quote-card">
-              <div className="quote-icon">🎙️</div>
+              <div className="quote-icon">
+                <img src={podcastIcon} alt="Microphone" />
+              </div>
               <p>"How can I give better podcasts?"</p>
             </div>
             <div className="quote-card">
-              <div className="quote-icon">🧮</div>
+              <div className="quote-icon">
+                <img src={mathIcon} alt="Math" />
+              </div>
               <p>"Help me practice math, out loud, not on paper."</p>
             </div>
             <div className="quote-card">
-              <div className="quote-icon">🎒</div>
+              <div className="quote-icon">
+                <img src={friendIcon} alt="Backpack" />
+              </div>
               <p>"How should I handle my first day of class?"</p>
+            </div>
+            <div className="quote-card">
+              <div className="quote-icon">
+                <img src={universityIcon} alt="Academics" />
+              </div>
+              <p>"Should I switch majors?"</p>
+            </div>
+            <div className="quote-card">
+              <div className="quote-icon">
+                <img src={jobIcon} alt="Interview" />
+              </div>
+              <p>"How can I prepare for my job interview?"</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="why-different">
+      <section id="why-different" className="why-different">
         <div className="container">
           <div className="section-label">Why this is different</div>
-          <h2>AI is the tool. Your student is the driver.</h2>
+          <h2>AI is the tool. You are the driver.</h2>
           <div className="text-content">
-            <p>The default way students use AI is to skip the thinking. That doesn't build confidence or skill. What I teach is a reframe: AI is the tool, your student is the driver.</p>
-            <p>Once it clicks that they can point AI at something they're struggling with and actually make progress, everything changes.</p>
+            <p>The default way students use AI is to skip the thinking. That doesn't build confidence or skill. What I teach is a reframe: AI is the tool, you are the driver.</p>
+            <p>Once it clicks that you can point AI at something you're struggling with and actually make progress, everything changes.</p>
           </div>
         </div>
       </section>
 
-      <section className="why-free">
-        <div className="container">
-          <div className="section-label">Why free?</div>
-          <h2>A good trade.</h2>
+      <div className="combined-section">
+        <div className="halftone-bg">
+          <div className="halftone-dots"></div>
+        </div>
+
+        <section className="why-free">
+          <div className="container">
+            <div className="section-label">Why free?</div>
+            <h2>A good trade.</h2>
+            <div className="text-content">
+              <p>I'm deep in this research at MIT and preparing for a talk at SXSW; working with real students is how I make the work better.</p>
+              <p>You get a free hour with an MIT researcher. I learn from real sessions. Good trade.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="about-section">
+          <div className="container">
+          <div className="section-label">About the Founder</div>
+          <h2>Dr. Elliott Hedman</h2>
           <div className="text-content">
-            <p>I'm deep in this research at MIT and preparing for a talk at SXSW; working with real students is how I make the work better.</p>
-            <p>Your student gets a free hour with an MIT researcher. I learn from real sessions. Good trade.</p>
+            <p>Dr. Elliott Hedman helps elevate the voices of all children. He earned his Ph.D. at the MIT Media Lab, where he helped invent a sensor that can measure children’s subconscious emotional responses.</p>
+            <p>After working at IDEO and Google, Elliott formed the consulting company mPath, that helps companies like the LEGO Group and McGraw Hill empathize and build for the students and teachers they serve.</p>
+            <p>In a blaze of passion, Elliott also created a free app, Wonder.io, that reinvents the reading experience for struggling readers. While he hasn’t fully pursued it yet, Elliott is convinced that he’s a pretty good stand-up comedian for 8 year old children.</p>
+            <div className="about-links" style={{ marginTop: '32px', display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
+              <a href="https://buildempathy.com/portfolio" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--comic-blue)', fontWeight: 600, textDecoration: 'none' }}>Link to Elliott’s CV (2024) →</a>
+              <a href="https://www.linkedin.com/in/customerobsession/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--comic-blue)', fontWeight: 600, textDecoration: 'none' }}>LinkedIn Profile →</a>
+            </div>
           </div>
         </div>
       </section>
+      </div>
 
       <section className="cta-section">
         <div className="container">
           <h2>Book a free session</h2>
           <p className="subtitle">One hour. One real problem. A new way to get unstuck.</p>
-          <a href="#" className="cta-btn">Book a Session</a>
+          <a href="https://outlook.office.com/book/Superpower@robotsandpencils.com" className="cta-btn">Book a Session</a>
           <p className="cta-note">Want to sit in as a parent? Totally fine.</p>
         </div>
       </section>

@@ -1,0 +1,56 @@
+/* ... (previous CSS) ... */
+
+/* About Section - Halftone Effect */
+.about-section {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.halftone-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #fff;
+  filter: contrast(20);
+  pointer-events: none;
+}
+
+.halftone-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--comic-blue) 60%, transparent 60%);
+  background-size: 40px 40px;
+  filter: blur(8px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,1));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,1));
+  opacity: 0.6;
+}
+
+.about-section h2 {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  padding: 8px 24px;
+  border: var(--comic-border);
+  box-shadow: var(--comic-shadow);
+  transform: rotate(-1deg);
+  z-index: 2;
+}
+
+.about-section .text-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 32px;
+  border: var(--comic-border);
+  box-shadow: var(--comic-shadow);
+  position: relative;
+  z-index: 2;
+}
+
+/* ... (rest of CSS) ... */

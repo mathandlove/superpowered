@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <h3>Elliott Hedman</h3>
+            <h3>Superpowered</h3>
             <p>Helping students think better with AI.</p>
           </div>
           <div className="footer-links">
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          © {new Date().getFullYear()} Elliott Hedman · MIT Media Lab
+          © {new Date().getFullYear()} Elliott Hedman
         </div>
       </div>
     </footer>

@@ -1,3 +1,40 @@
-#root {
-  width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Public+Sans:wght@400;700;900&display=swap');
+
+:root {
+  --comic-black: #000000;
+  --comic-white: #ffffff;
+  --comic-yellow: #FFD700;
+  --comic-blue: #38bdf8;
+  --comic-red: #ef4444;
+  --comic-purple: #a855f7;
+  --comic-border: 3px solid var(--comic-black);
+  --comic-shadow: 6px 6px 0px var(--comic-black);
+  --comic-shadow-hover: 2px 2px 0px var(--comic-black);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  color: var(--comic-black);
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(var(--comic-black) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: #f0f9ff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
