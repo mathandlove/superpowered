@@ -20,12 +20,12 @@ function App() {
             <h1><span className="hero-headline">AI can help students think better,</span> <span>if they learn how to use it.</span></h1>
             <p>Most students have never been shown how to use AI well. Not to copy and paste. To get unstuck, think clearly, practice skills, and solve real problems they're facing.</p>
             <div className="hero-cta-group">
-              <a href="https://outlook.office.com/book/Superpower@robotsandpencils.com" className="primary-btn">Book a Free Session</a>
+              <a href="https://outlook.office.com/book/Superpower@robotsandpencils.com" target="_blank" rel="noopener noreferrer" className="primary-btn">Book a Free Session</a>
               <span className="hero-note">10 spots available</span>
             </div>
             <div className="intro-block">
               <img src={elliottPhoto} alt="Elliott Hedman" className="profile-photo" />
-              <p className="intro-name">I’m <strong style={{ color: 'var(--comic-blue)' }}>Dr. Elliott Hedman</strong> (MIT Media Lab). In my day job, I advise companies on how to use AI—now I’m teaching students those same skills.</p>
+              <p className="intro-name">I’m <strong style={{ color: 'var(--comic-blue)' }}>Dr. Elliott Hedman</strong> (MIT Media Lab). In my day job, I advise companies on how to use AI. Now I’m teaching students those same skills.</p>
             </div>
           </div>
         </div>
@@ -126,8 +126,8 @@ function App() {
             <div className="section-label">Why free?</div>
             <h2>A good trade.</h2>
             <div className="text-content">
-              <p>I'm deep in this research at MIT and preparing for a talk at SXSW; working with real students is how I make the work better.</p>
-              <p>You get a free hour with an MIT researcher. I learn from real sessions. Good trade.</p>
+              <p>I'm deep in this research and preparing for a talk at SXSW; working with real students is how I make the work better.</p>
+              <p>You get a free hour with a researcher. I learn from real sessions. Good trade.</p>
             </div>
           </div>
         </section>
@@ -137,9 +137,7 @@ function App() {
           <div className="section-label">About the Founder</div>
           <h2>Dr. Elliott Hedman</h2>
           <div className="text-content">
-            <p>Dr. Elliott Hedman helps elevate the voices of all children. He earned his Ph.D. at the MIT Media Lab, where he helped invent a sensor that can measure children’s subconscious emotional responses.</p>
-            <p>After working at IDEO and Google, Elliott formed the consulting company mPath, that helps companies like the LEGO Group and McGraw Hill empathize and build for the students and teachers they serve.</p>
-            <p>In a blaze of passion, Elliott also created a free app, Wonder.io, that reinvents the reading experience for struggling readers. While he hasn’t fully pursued it yet, Elliott is convinced that he’s a pretty good stand-up comedian for 8 year old children.</p>
+            <p>Dr. Elliott Hedman is an MIT Media Lab PhD who helps students learn how to use AI as a coach—so they can think better, get unstuck, and take ownership of their learning. He’s worked at Google and IDEO and has helped organizations like LEGO and McGraw Hill build for the students and teachers they serve. Now he offers free 1:1 sessions where students bring a real challenge and learn a practical, repeatable way to use AI responsibly—without replacing their own work or voice.</p>
             <div className="about-links" style={{ marginTop: '32px', display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
               <a href="https://buildempathy.com/portfolio" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--comic-blue)', fontWeight: 600, textDecoration: 'none' }}>Link to Elliott’s CV (2024) →</a>
               <a href="https://www.linkedin.com/in/customerobsession/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--comic-blue)', fontWeight: 600, textDecoration: 'none' }}>LinkedIn Profile →</a>
@@ -153,7 +151,7 @@ function App() {
         <div className="container">
           <h2>Book a free session</h2>
           <p className="subtitle">One hour. One real problem. A new way to get unstuck.</p>
-          <a href="https://outlook.office.com/book/Superpower@robotsandpencils.com" className="cta-btn">Book a Session</a>
+          <a href="https://outlook.office.com/book/Superpower@robotsandpencils.com" target="_blank" rel="noopener noreferrer" className="cta-btn">Book a Session</a>
           <p className="cta-note">Want to sit in as a parent? Totally fine.</p>
         </div>
       </section>

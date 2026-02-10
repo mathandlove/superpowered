@@ -24,7 +24,8 @@
   font-family: 'Bangers', cursive;
   font-size: 2rem;
   margin-bottom: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .footer-brand p {
@@ -42,7 +43,7 @@
   font-family: 'Bangers', cursive;
   font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 20px;
 }
 

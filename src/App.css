@@ -93,6 +93,7 @@
 .hero h1 span {
   color: var(--comic-blue);
   display: block;
+  white-space: nowrap;
   -webkit-text-stroke: 1px var(--comic-black);
   text-shadow: 4px 4px 0px var(--comic-black);
 }
@@ -168,6 +169,8 @@ section {
   border: var(--comic-border);
   box-shadow: 4px 4px 0px var(--comic-black);
   transform: rotate(-2deg);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 h2 {
@@ -305,6 +308,7 @@ h2 {
   -webkit-text-stroke: 2px var(--comic-black);
   margin-bottom: 8px;
   line-height: 1;
+  letter-spacing: 2px;
 }
 
 .step-card h3 {
@@ -323,13 +327,14 @@ h2 {
   background: var(--comic-blue);
   border: var(--comic-border);
   padding: 32px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--comic-black);
-  font-weight: 700;
-  font-family: 'Bangers', cursive;
+  font-weight: 900;
+  font-family: 'Public Sans', sans-serif;
   box-shadow: var(--comic-shadow);
   text-align: center;
   transform: rotate(1deg);
+  line-height: 1.5;
 }
 
 /* Quotes Section - Speech Bubbles */
@@ -454,7 +459,8 @@ h2 {
   font-size: 4rem;
   margin-bottom: 16px;
   text-shadow: none;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .cta-section .subtitle {

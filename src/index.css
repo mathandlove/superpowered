@@ -35,6 +35,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bangers', cursive;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
 }

@@ -31,7 +31,7 @@ const Navbar = () => {
           <a href="#about">About</a>
         </div>
         <div className="navbar-cta">
-          <a href="https://outlook.office.com/book/Superpower@robotsandpencils.com" className="nav-btn">Book Session</a>
+          <a href="https://outlook.office.com/book/Superpower@robotsandpencils.com" target="_blank" rel="noopener noreferrer" className="nav-btn">Book Session</a>
         </div>
       </div>
     </nav>
