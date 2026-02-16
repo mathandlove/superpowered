@@ -1,0 +1,222 @@
+/* Slide Page — hides the default body dot pattern */
+.slide-page {
+  position: fixed;
+  inset: 0;
+  background: var(--comic-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* 16:9 PowerPoint slide container (1920 × 1080 design space) */
+.slide-frame {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+  background: var(--comic-yellow);
+  transform-origin: center center;
+  /* Scaled down to fit viewport — JS handles this */
+}
+
+/* Comic burst background rays */
+.slide-burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0.35) 0deg 10deg,
+    transparent 10deg 20deg
+  );
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: slide-spin 80s linear infinite;
+}
+
+@keyframes slide-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Main content card */
+.slide-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-1deg);
+  background: #fff;
+  border: 5px solid var(--comic-black);
+  box-shadow: 12px 12px 0px var(--comic-black);
+  padding: 64px 80px;
+  width: 1560px;
+  height: 860px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Top label / badge */
+.slide-label {
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: var(--comic-black);
+  color: var(--comic-yellow);
+  padding: 10px 28px;
+  border: 4px solid var(--comic-black);
+  box-shadow: 6px 6px 0px var(--comic-yellow);
+  transform: rotate(2deg);
+  margin-bottom: 40px;
+}
+
+/* Main headline */
+.slide-title {
+  font-family: 'Bangers', cursive;
+  font-size: 5.5rem;
+  line-height: 1.05;
+  color: var(--comic-black);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 0px var(--comic-yellow);
+}
+
+.slide-title-accent {
+  color: var(--comic-blue);
+  display: block;
+  font-size: 6.5rem;
+  -webkit-text-stroke: 2px var(--comic-black);
+  text-shadow: 5px 5px 0px var(--comic-black);
+}
+
+/* Date callout */
+.slide-date {
+  font-family: 'Bangers', cursive;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  color: var(--comic-black);
+  margin: 32px 140px 16px 0; /* Added right margin to shift it left, away from QR */
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.slide-date-badge {
+  background: var(--comic-red);
+  color: #fff;
+  padding: 12px 36px;
+  border: 4px solid var(--comic-black);
+  box-shadow: 6px 6px 0px var(--comic-black);
+  transform: rotate(-2deg);
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+/* Subtitle / description */
+.slide-subtitle {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--comic-black);
+  max-width: 900px;
+  line-height: 1.4;
+  margin-top: 24px;
+}
+
+/* QR code block */
+.slide-qr {
+  position: absolute;
+  bottom: 125px; /* Moved up from 90px to avoid footer overlap */
+  right: 50px;   /* Adjusted slightly from 40px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 4px solid var(--comic-black);
+  box-shadow: 6px 6px 0px var(--comic-black);
+  padding: 18px;
+  border-radius: 6px;
+  z-index: 4;
+}
+
+.slide-qr-label {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--comic-black);
+  letter-spacing: 0.5px;
+}
+
+/* Footer / branding strip */
+.slide-footer {
+  position: absolute;
+  bottom: -5px; /* Overlap bottom border to prevent white gap */
+  left: -5px;   /* Overlap left border */
+  right: -5px;  /* Overlap right border */
+  background: var(--comic-black);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  z-index: 3;
+}
+
+.slide-brand {
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  color: var(--comic-yellow);
+}
+
+.slide-speaker {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.slide-speaker strong {
+  color: var(--comic-blue);
+}
+
+/* Download button — floats in bottom-left corner outside the slide */
+.slide-download-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 10000;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  background: var(--comic-blue);
+  color: #fff;
+  border: 3px solid var(--comic-black);
+  box-shadow: 4px 4px 0px var(--comic-black);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.slide-download-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--comic-black);
+}
+
+.slide-download-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--comic-black);
+}
+
+.slide-download-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
