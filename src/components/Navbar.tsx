@@ -35,9 +35,9 @@ const Navbar = ({ hideCta = false, hideBanner = true }: NavbarProps) => {
             Superpowered
           </div>
           <div className="navbar-links">
-            <a href="#how-it-works">How it works</a>
-            <a href="#stories">Stories</a>
-            <a href="#about">About</a>
+            <a href="/#how-it-works">How it works</a>
+            <a href="/#stories">Stories</a>
+            <a href="/#about">About</a>
             <a href="/teachers">For Teachers</a>
           </div>
           {!hideCta && (

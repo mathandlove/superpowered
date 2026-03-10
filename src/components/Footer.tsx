@@ -12,9 +12,9 @@ const Footer = () => {
           <div className="footer-links">
             <div className="footer-col">
               <h4>Navigation</h4>
-              <a href="#how-it-works">How it works</a>
-              <a href="#stories">Stories</a>
-              <a href="#about">About</a>
+              <a href="/#how-it-works">How it works</a>
+              <a href="/#stories">Stories</a>
+              <a href="/#about">About</a>
               <a href="/teachers">For Teachers</a>
             </div>
             <div className="footer-col">
