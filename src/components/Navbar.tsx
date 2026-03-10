@@ -7,9 +7,9 @@ interface NavbarProps {
   hideBanner?: boolean;
 }
 
-const Navbar = ({ hideCta = false, hideBanner = false }: NavbarProps) => {
+const Navbar = ({ hideCta = false, hideBanner = true }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
-  const [showBanner, setShowBanner] = useState(true);
+  const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {

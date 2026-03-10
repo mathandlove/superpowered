@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import './TeacherFormPage.css';
 
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/a/macros/buildempathy.com/s/AKfycbxT9QuoBTrblf_7lBvT_G7X3LyGKmN03t5Tw8cdzXrlLlU3AzOJEKtN39PGCnO7XgXOXw/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzBWzUMwlxVB2zgLqt-CkNu6u26TeFDfecJaM5XWZuRwCiBRrG2Llzf8CmjYAVipf-coQ/exec';
 
 const TeacherFormPage = () => {
   const [formData, setFormData] = useState({
@@ -24,13 +24,15 @@ const TeacherFormPage = () => {
     setStatus('submitting');
 
     try {
+      const params = new URLSearchParams();
+      params.append('name', formData.name);
+      params.append('email', formData.email);
+      params.append('school', formData.school);
+
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        body: params,
       });
 
       setStatus('success');
