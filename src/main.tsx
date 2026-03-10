@@ -5,6 +5,8 @@ import './index.css'
 import App from './App'
 import TalkSlide from './components/TalkSlide'
 import TalkPage from './components/TalkPage'
+import PresenterView from './components/PresenterView'
+import TeacherFormPage from './components/TeacherFormPage'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,6 +15,8 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<App />} />
         <Route path="/talk" element={<TalkPage />} />
         <Route path="/talk-slide" element={<TalkSlide />} />
+        <Route path="/talk/present" element={<PresenterView />} />
+        <Route path="/teachers" element={<TeacherFormPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

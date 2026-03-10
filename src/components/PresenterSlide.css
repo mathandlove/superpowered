@@ -1,0 +1,265 @@
+/* PresenterSlide — 1920×1080 design space, best-practice typography and hierarchy */
+
+.presenter-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  overflow: hidden;
+  background: var(--comic-yellow);
+}
+
+.presenter-slide[data-design-size="true"] {
+  width: 1920px;
+  height: 1080px;
+  min-height: 1080px;
+}
+
+.presenter-slide__burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0.28) 0deg 10deg,
+    transparent 10deg 20deg
+  );
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: presenter-slide-spin 100s linear infinite;
+}
+
+@keyframes presenter-slide-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.presenter-slide__card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-0.5deg);
+  background: #fff;
+  border: 4px solid var(--comic-black);
+  box-shadow: 10px 10px 0 var(--comic-black);
+  padding: clamp(24px, 4vw, 56px) clamp(32px, 5vw, 72px);
+  width: 92%;
+  max-width: 1560px;
+  height: 82%;
+  max-height: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Wrapper that takes remaining space and centers the (possibly scaled) content */
+.presenter-slide__content-area {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner content measured for scale-to-fit; display inline-block so scrollHeight is correct */
+.presenter-slide__content-scale {
+  display: inline-block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.presenter-slide[data-design-size="true"] .presenter-slide__card {
+  width: 1560px;
+  height: 860px;
+  padding: 56px 72px;
+}
+
+/* Typography scale — large for readability (back-of-room rule) */
+.presenter-slide__headline {
+  font-family: 'Bangers', cursive;
+  color: var(--comic-black);
+  letter-spacing: 2px;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.presenter-slide__headline--title {
+  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+  text-shadow: 3px 3px 0 var(--comic-yellow);
+}
+
+.presenter-slide__headline--large {
+  font-size: clamp(2.2rem, 4.5vw, 4.5rem);
+}
+
+.presenter-slide__headline--content {
+  font-size: clamp(1.8rem, 3.5vw, 3.5rem);
+  margin-bottom: 0.35em;
+}
+
+.presenter-slide[data-design-size="true"] .presenter-slide__headline--title {
+  font-size: 5.5rem;
+}
+
+.presenter-slide[data-design-size="true"] .presenter-slide__headline--large {
+  font-size: 4.5rem;
+}
+
+.presenter-slide[data-design-size="true"] .presenter-slide__headline--content {
+  font-size: 3.5rem;
+}
+
+.presenter-slide__headline .presenter-slide__headline--accent {
+  color: var(--comic-blue);
+  display: block;
+  -webkit-text-stroke: 2px var(--comic-black);
+  text-shadow: 4px 4px 0 var(--comic-black);
+}
+
+.presenter-slide__subtitle {
+  font-family: 'Public Sans', sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.8rem);
+  font-weight: 700;
+  color: var(--comic-black);
+  line-height: 1.35;
+  margin: 0.4em 0 0;
+  max-width: 90%;
+  white-space: pre-line;
+}
+
+.presenter-slide__subtitle--title {
+  font-size: clamp(1.1rem, 2vw, 2rem);
+  margin-top: 0.5em;
+}
+
+.presenter-slide__badge {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(1rem, 1.8vw, 1.8rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: var(--comic-black);
+  color: var(--comic-yellow);
+  padding: 8px 24px;
+  border: 3px solid var(--comic-black);
+  box-shadow: 5px 5px 0 var(--comic-yellow);
+  transform: rotate(2deg);
+  margin-bottom: 0.5em;
+  display: inline-block;
+}
+
+.presenter-slide__section-label {
+  font-family: 'Public Sans', sans-serif;
+  font-size: clamp(0.75rem, 1.2vw, 1.1rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--comic-blue);
+  margin-bottom: 0.25em;
+  display: block;
+}
+
+/* Bullets — 3–5 items, one line each, large enough to read */
+.presenter-slide__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0.75em 0 0;
+  text-align: left;
+  max-width: 85%;
+}
+
+.presenter-slide__bullet {
+  font-family: 'Public Sans', sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.75rem);
+  font-weight: 700;
+  color: var(--comic-black);
+  line-height: 1.45;
+  padding: 0.35em 0 0.35em 1.4em;
+  position: relative;
+}
+
+.presenter-slide__bullet::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5em;
+  height: 0.5em;
+  background: var(--comic-blue);
+  border: 2px solid var(--comic-black);
+  box-shadow: 2px 2px 0 var(--comic-black);
+}
+
+.presenter-slide[data-design-size="true"] .presenter-slide__bullet {
+  font-size: 1.75rem;
+}
+
+/* Quote */
+.presenter-slide__quote-block {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.presenter-slide__quote {
+  font-family: 'Public Sans', sans-serif;
+  font-size: clamp(1.1rem, 2.2vw, 2.2rem);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--comic-black);
+  line-height: 1.4;
+  margin: 0;
+  padding: 0 1em;
+  border-left: 6px solid var(--comic-blue);
+  box-shadow: 3px 0 0 var(--comic-black);
+  text-align: left;
+}
+
+.presenter-slide[data-design-size="true"] .presenter-slide__quote {
+  font-size: 2.2rem;
+}
+
+/* Block layouts */
+.presenter-slide__title-block,
+.presenter-slide__section,
+.presenter-slide__content-block,
+.presenter-slide__quote-block {
+  width: 100%;
+}
+
+.presenter-slide__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--comic-black);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+  z-index: 3;
+  margin: 0 -1px -1px;
+}
+
+.presenter-slide[data-design-size="true"] .presenter-slide__footer {
+  padding: 18px 48px;
+}
+
+.presenter-slide__brand {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  letter-spacing: 2px;
+  color: var(--comic-yellow);
+}
+
+.presenter-slide__speaker {
+  font-family: 'Public Sans', sans-serif;
+  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
+  font-weight: 600;
+  color: #fff;
+}

@@ -38,6 +38,7 @@ const Navbar = ({ hideCta = false, hideBanner = false }: NavbarProps) => {
             <a href="#how-it-works">How it works</a>
             <a href="#stories">Stories</a>
             <a href="#about">About</a>
+            <a href="/teachers">For Teachers</a>
           </div>
           {!hideCta && (
             <div className="navbar-cta">

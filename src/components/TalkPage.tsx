@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './TalkPage.css';
@@ -36,6 +37,9 @@ const TalkPage = () => {
               </div>
             </div>
           </div>
+          <Link to="/talk/present" className="talk-present-link">
+            Open presenter view →
+          </Link>
         </div>
       </div>
 

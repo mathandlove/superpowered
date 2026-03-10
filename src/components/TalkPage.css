@@ -61,6 +61,23 @@
   gap: 16px;
 }
 
+.talk-present-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--comic-blue);
+  text-decoration: none;
+  border-bottom: 2px solid var(--comic-blue);
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.talk-present-link:hover {
+  color: var(--comic-black);
+  border-color: var(--comic-black);
+}
+
 .detail-icon {
   font-size: 2rem;
 }

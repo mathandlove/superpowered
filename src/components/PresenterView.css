@@ -1,0 +1,194 @@
+/* PresenterView — script left, slide right (presenter view best practices) */
+
+.presenter-view {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a2e;
+  color: #e2e8f0;
+  z-index: 9999;
+  font-family: 'Public Sans', sans-serif;
+}
+
+/* Top bar: talk title, slide progress, timer */
+.presenter-view__bar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.presenter-view__title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #cbd5e1;
+}
+
+.presenter-view__progress {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.presenter-view__progress-sep {
+  color: #64748b;
+  font-weight: 400;
+  margin: 0 2px;
+}
+
+.presenter-view__timer {
+  font-variant-numeric: tabular-nums;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--comic-yellow);
+  min-width: 4ch;
+}
+
+/* Two panels: notes left, slide right */
+.presenter-view__panels {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 0;
+  min-height: 0;
+}
+
+/* Left: speaker notes (script) */
+.presenter-view__notes-panel {
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;
+  border-right: 2px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.presenter-view__notes-label {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #64748b;
+  padding: 14px 20px 8px;
+}
+
+.presenter-view__notes-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 24px 32px 20px;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+}
+
+.presenter-view__notes-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.presenter-view__notes-content::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.presenter-view__notes-content::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+.presenter-view__notes-content::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Right: slide preview (audience view) */
+.presenter-view__slide-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #0f172a;
+  min-height: 0;
+}
+
+.presenter-view__slide-wrap {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.presenter-view__slide-wrap .presenter-slide {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Navigation strip */
+.presenter-view__nav {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.presenter-view__nav-btn {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  background: var(--comic-blue);
+  color: #0f172a;
+  border: 2px solid var(--comic-black);
+  box-shadow: 3px 3px 0 var(--comic-black);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.presenter-view__nav-btn:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--comic-black);
+}
+
+.presenter-view__nav-btn:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--comic-black);
+}
+
+.presenter-view__nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.presenter-view__nav-hint {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+@media (max-width: 900px) {
+  .presenter-view__panels {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .presenter-view__notes-panel {
+    border-right: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .presenter-view__nav-hint {
+    display: none;
+  }
+}
